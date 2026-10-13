@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#100d20">
+  <title>Whack-a-Mole | Arcade</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <div class="app">
+
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Whack-a-Mole home">
+        <span class="brand-icon">✦</span>
+        <span>ARCADE<span class="brand-light">ZONE</span></span>
+      </a>
+
+      <div class="coin-wallet">
+        <span>🪙</span>
+        <span id="coinBalance">0</span>
+        <small>COINS</small>
+      </div>
+    </header>
+
+    <!-- WELCOME SCREEN -->
+    <section id="welcomeScreen" class="welcome-screen">
+      <div class="welcome-content">
+        <div class="eyebrow">⚡ THE ULTIMATE REFLEX CHALLENGE</div>
+
+        <h1>WHACK<br><span>A MOLE</span></h1>
+
+        <p class="welcome-description">
+          Test your reflexes. Catch the moles.<br>
+          Collect coins. Beat every level.
+        </p>
+
+        <div class="welcome-stats">
+          <div class="welcome-stat">
+            <span>🏆</span>
+            <strong id="welcomeBest">0</strong>
+            <small>BEST SCORE</small>
+          </div>
+          <div class="welcome-stat">
+            <span>🪙</span>
+            <strong id="welcomeCoins">0</strong>
+            <small>YOUR COINS</small>
+          </div>
+          <div class="welcome-stat">
+            <span>🎯</span>
+            <strong>10+</strong>
+            <small>POINTS / HIT</small>
+          </div>
+        </div>
+
+        <button id="playBtn" class="primary-btn">
+          ▶ &nbsp; START GAME
+        </button>
+
+        <p class="welcome-note">FREE TO PLAY · BUILT FOR FUN</p>
+      </div>
+
+      <div class="welcome-decoration decoration-one">✦</div>
+      <div class="welcome-decoration decoration-two">✧</div>
+    </section>
+
+    <!-- GAME SCREEN -->
+    <main id="gameScreen" class="game-screen" hidden>
+
+      <div class="game-heading">
+        <div>
+          <p class="eyebrow">ARCADE CHALLENGE</p>
+          <h2>Let's Play! <span>🎯</span></h2>
+        </div>
+
+        <button id="homeBtn" class="secondary-btn">
+          ↖ HOME
+        </button>
+      </div>
+
+      <div class="level-bar">
+        <div>
+          <small>CURRENT LEVEL</small>
+          <strong id="levelDisplay">LEVEL 1</strong>
+        </div>
+        <div class="level-progress">
+          <div id="levelProgressFill"></div>
+        </div>
+        <div>
+          <small>TARGET</small>
+          <strong id="targetDisplay">100 PTS</strong>
+        </div>
+      </div>
+
+      <section class="stats">
+        <div class="stat">
+          <span class="stat-icon">🎯</span>
+          <small>SCORE</small>
+          <strong id="score">0</strong>
+        </div>
+        <div class="stat">
+          <span class="stat-icon">⏱️</span>
+          <small>TIME LEFT</small>
+          <strong id="time">60</strong>
+        </div>
+        <div class="stat">
+          <span class="stat-icon">🏆</span>
+          <small>BEST SCORE</small>
+          <strong id="best">0</strong>
+        </div>
+      </section>
+
+      <section class="game-panel">
+        <div class="game-toolbar">
+          <div>
+            <span class="live-dot"></span>
+            <span id="gameStatus">READY TO PLAY</span>
+          </div>
+
+          <label class="difficulty-control">
+            MODE
+            <select id="difficulty">
+              <option value="1000">Easy</option>
+              <option value="750" selected>Medium</option>
+              <option value="500">Hard</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="board" id="board">
+          <button class="hole" aria-label="Hole 1"></button>
+          <button class="hole" aria-label="Hole 2"></button>
+          <button class="hole" aria-label="Hole 3"></button>
+          <button class="hole" aria-label="Hole 4"></button>
+          <button class="hole" aria-label="Hole 5"></button>
+          <button class="hole" aria-label="Hole 6"></button>
+          <button class="hole" aria-label="Hole 7"></button>
+          <button class="hole" aria-label="Hole 8"></button>
+          <button class="hole" aria-label="Hole 9"></button>
+        </div>
+
+        <p class="message" id="message">
+          Press Start to begin your challenge!
+        </p>
+
+        <div class="game-actions">
+          <button id="startBtn" class="primary-btn">
+            ▶ START ROUND
+          </button>
+          <button id="nextLevelBtn" class="primary-btn" hidden>
+            NEXT LEVEL →
+          </button>
+          <button id="restartBtn" class="secondary-btn">
+            ↻ RESTART
+          </button>
+        </div>
+      </section>
+
+      <p class="game-tip">💡 QUICK TIP: Hit the mole before it disappears to earn coins!</p>
+
+    </main>
+
+    <footer>ARCADE ZONE <span>·</span> WHACK-A-MOLE</footer>
+
+  </div>
+
+</body>
+</html>
